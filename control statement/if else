@@ -1,0 +1,44 @@
+package com.dl.one;
+
+public class Eg1 {
+
+	public static void main(String[] args) {
+
+		// Control Statements
+		// Selection Statements: if,else, else if, switch
+		// Iteration Statements: for loop, while loop, do while [for each]
+		// Transfer Statements: break and continue
+
+		// What is Unreachable code
+		// If we pass boolean default value to if condition we can expect the dead code
+		// unreachable code
+
+		// Syntax:
+//		if(condition) {
+//			
+//		}
+
+		// DeadCode
+//		if (false) {
+//
+//		}
+		
+		//Dead code
+//		if (true) {
+//
+//		}else {
+//			
+//		}
+		
+		int a = 10;
+		int b = 5;
+		if(a > b) {
+			System.out.println("Condition Checked");
+		}else {
+			System.out.println("Condition Failed");
+		}
+		
+	
+		
+	}
+}
