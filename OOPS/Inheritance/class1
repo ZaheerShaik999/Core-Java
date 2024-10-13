@@ -1,1 +1,39 @@
+package com.dl.inheritance;
 
+class A{
+	
+	//return types: pt, wt, string, userdefiend, void
+	//instance method
+	public void m1() {
+		
+		System.out.println("M1 Method of Class A");
+	}
+	
+	//instance method with arguments
+	public void getProductDetails(int pid, String productName, double productPrice) {
+		
+		System.out.println(pid);
+		System.out.println(productName);
+		System.out.println(productPrice);
+	}
+}
+
+//Inheritance : IS A Relationship
+class B extends A{
+	
+	public void m2() {
+		System.out.println("M2 Method of Class B");
+	}
+}
+
+public class ClientOne {
+
+	public static void main(String[] args) {
+		
+		B b = new B();
+		b.m1();
+		b.m2();
+		b.getProductDetails(101, "MI", 10000.00);
+		
+	}
+}
