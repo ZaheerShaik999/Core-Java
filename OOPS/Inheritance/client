@@ -1,0 +1,32 @@
+package com.dl.inheritance;
+
+public class Client {
+
+	public static void main(String[] args) {
+
+		//Inheritance: Types of Inheritance
+		//1.Single Level (Support)
+		//2.Multi-Level Inheritance (Support)
+		//3.Mutiple-Inheritance (No-Support here bcoz alternate is Interface)
+		//4.Hierarchical (Support)
+		//5.Hybrid Inheritance (Support)
+		
+		//Inheritance : Acquiring the properties from one class to another class 
+		Integer i = 10; //Integer is Class, i is variable
+		int intValue = i.intValue(); //variable.instanceMethod()
+		System.out.println(intValue);
+
+		//Python: what ever you right they are objects
+		//Java : what ever you right they are not objects
+		
+		int x = 10; // Not Object(primitive type) -- Object
+		
+		Integer y = 10; // Object -- Not Object((primitive type)
+		
+		//How achieve the Inheritance : using extends keyword
+		
+		//this keyword: always refers to the current class v, m ,o
+		
+		
+	}
+}
