@@ -1,1 +1,29 @@
+package poly;
+// Method Overloading :- Within the same class writing two or more methods with same name but different signature
+// In below 3 methods one is different for Method Overloading
+// 1. No of Parameters
+// 2. Type of Parameters
+// 3. Order of Parameters
+// Method overloading is example of Static poly-morphism
+
+
+public class MeOvEX {
+	public void add(int a, int b) {
+		System.out.println("sum="+(a+b));		
+	}
+	public void add(int x, int y , int z) {
+		System.out.println("sum="+(x+y+z));		
+	}
+	public void add(float a, float b) {
+		System.out.println("sum="+(a+b));		
+	}
+	public static void main(String[] args) {
+		MeOvEX meOvEX = new MeOvEX();
+		meOvEX.add(10, 20);
+		meOvEX.add(30,40);
+		meOvEX.add(60, 6, 2);
+	}
+	
+	
+}
 
