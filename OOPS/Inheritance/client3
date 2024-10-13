@@ -1,0 +1,24 @@
+package com.dl.inheritance;
+
+class X{
+	
+	
+}
+
+class Y{
+	
+	
+}
+
+//No Support for Multiple Inheritance : alternate is interface
+class Z extends X, Y {
+	
+	
+}
+public class ClientThree {
+
+	public static void main(String[] args) {
+		
+		
+	}
+}
