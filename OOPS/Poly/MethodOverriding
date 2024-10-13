@@ -1,0 +1,27 @@
+package poly;
+
+class Parent {
+	void m1(int a , int b){
+		System.out.println("m1:"+(a+b));
+		
+	}
+}
+class Child extends Parent {
+	void m1(int a , int b){
+		System.out.println("m2:"+(a+b));
+		
+	}
+}
+
+public class MeOvrd {
+	public static void main(String[] args) {
+		Child child = new Child();
+		child.m1(7, 7);
+		
+		Parent parent = new Parent();
+		parent.m1(11,22);
+				
+		
+	}
+
+}
