@@ -1,1 +1,21 @@
+Polymorphism in Java refers to the ability of objects of different classes to respond to the same method call in different ways. It's a fundamental concept in object-oriented programming that promotes code flexibility and reusability.
+
+There are two main types of polymorphism:
+
+1. Method Overriding:
+
+Occurs when a subclass provides a specific implementation for a method inherited from its superclass.
+The subclass's method replaces the superclass's method when called on an object of the subclass.
+Enables you to customize the behavior of inherited methods based on the specific subclass.
+2. Method Overloading:
+
+Occurs when a class has multiple methods with the same name but different parameters (number, type, or order).   
+The compiler chooses the appropriate method based on the arguments passed during the method call.
+Allows you to create methods with the same name but different functionalities.
+Key Points:
+
+Polymorphism is achieved through inheritance.
+It enhances code readability and maintainability.
+It allows you to write more generic and reusable code.
+It's essential for designing flexible and extensible software.
 
