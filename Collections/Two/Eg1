@@ -1,0 +1,183 @@
+package com.dl.two;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class Eg1 {
+
+	public static void main(String[] args) {
+		
+		//List:
+		//ArrayList : Ordered Elements, Duplicates Allowed, Null Allowed
+		//LinkedList : Ordered Elements, Duplicates Allowed, Null Allowed
+		
+		//Cursors: 
+		//ArrayList : Iterator
+		//LinkedList : ListIterator
+		//Vector : Enumeration
+		
+		//Performance:
+		//ArrayList is faster in Sorting Data and Accessing Data
+		//LinkedList is faster in Manipulation Data
+		//Vector is Synchronized
+		
+		//Set:
+		//HashSet: UnOrdered Elements, No Duplicates,  Null Allowed Once
+		//LinkedHashSet: Ordered Elements, No Duplicates,  Null Allowed Once
+		//TreeSet: Natural Sorting Elements, No Duplicates,  Null Not Allowed
+		
+		//Cursors: 
+		//HashSet : Iterator, SplitIterator
+		//LinkedHashSet : Iterator, SplitIterator
+		//TreeSet : Iterator, SplitIterator
+		
+		//Arrays:
+		//toArray()
+		
+		//Add Data
+		//add()
+		
+		//Remove Data
+		//remove()
+		//clear()
+		
+		
+		//Performance:
+		//HashSet is generally faster for basic operations like add and remove
+		//LinkedHashSet is slower than HashSet due to maintaing a linked list to preserve insertion order, This is useful when order matter
+		
+		//Draw the Hierarchy of Set
+		//Collection(I) -- Set(I) -- HashSet(C) -- LinkedHashSet(C)
+		//Collection(I) -- Set(I) -- NavigableSet(I) -- SortedSet(I)-- TreeSet(C)
+		
+		//UnOrdered Elements,  No Duplicates, Null Allowed Once
+		HashSet<String> hashSet = new HashSet<String>();
+		hashSet.add("NameOne");
+		hashSet.add("NameTwo");
+		hashSet.add("NameThree");
+		hashSet.add("NameFour");
+		hashSet.add("NameFive");
+		hashSet.add("NameSix");
+		hashSet.add("NameOne");
+		hashSet.add("NameSeven");
+		hashSet.add(null);
+		hashSet.add(null);
+		System.out.println(hashSet); // [NameOne, null, NameFive, NameFour, NameTwo, NameSix, NameThree, NameSeven]
+		
+		//Ordered Elements, No Duplicates,  Null Allowed Once
+		LinkedHashSet<String> linkedHashSet = new LinkedHashSet<String>();
+		linkedHashSet.add("NameOne");
+		linkedHashSet.add("NameTwo");
+		linkedHashSet.add("NameThree");
+		linkedHashSet.add("NameFour");
+		linkedHashSet.add("NameFive");
+		linkedHashSet.add("NameSix");
+		linkedHashSet.add("NameOne");
+		linkedHashSet.add("NameSeven");
+		linkedHashSet.add(null);
+		linkedHashSet.add(null);
+		System.out.println(linkedHashSet);  // [NameOne, NameTwo, NameThree, NameFour, NameFive, NameSix, NameSeven, null]
+		
+		// Natural Sorting Elements, No Duplicates,  Null Not Allowed
+		TreeSet<String> treeset = new TreeSet<String>();
+		treeset.add("A");
+		treeset.add("D");
+		treeset.add("E");
+		treeset.add("B");
+		treeset.add("C");
+		treeset.add("D");
+		//treeset.add(null); // java.lang.NullPointerException
+		System.out.println(treeset); // [A, B, C, D, E]
+		
+		TreeSet<Integer> tset = new TreeSet<>(); 
+		tset.add(6);
+		tset.add(4);
+		tset.add(2);
+		tset.add(1);
+		tset.add(5);
+		tset.add(3);
+		//tset.add(null); // java.lang.NullPointerException
+		System.out.println(tset); // [1, 2, 3, 4, 5, 6]
+		
+		// Natural Sorting Elements, No Duplicates,  Null Not Allowed
+		SortedSet<String> set = new TreeSet<String>();
+		set.add("C");
+		set.add("D");
+		set.add("a");
+		set.add("A");
+		set.add("B");
+		set.add("E");
+		set.add("F");
+		set.add("B");
+		set.add("C");
+		System.out.println(set);  // [A, B, C, D, E, F, a]
+		
+		System.out.println(set.first()); // A
+		System.out.println(set.last()); // a
+		System.out.println(set.headSet("C")); //Less than : [A, B]
+		System.out.println(set.tailSet("C")); //Greare than : [C, D, E, F, a]
+		System.out.println(set.subSet("D", "a")); // from and to : //[D, E, F]
+		
+		SortedSet<Integer> sortedSet = new TreeSet<Integer>();
+		sortedSet.add(3);
+		sortedSet.add(1);
+		sortedSet.add(5);
+		sortedSet.add(2);
+		sortedSet.add(4);
+		sortedSet.add(7);
+		sortedSet.add(5);
+		sortedSet.add(6);
+		sortedSet.add(6);
+		System.out.println(set);  // [A, B, C, D, E, F, a]
+		
+		System.out.println(sortedSet.first()); // A
+		System.out.println(sortedSet.last()); // a
+		System.out.println(sortedSet.headSet(3)); //Less than : [1, 2]
+		System.out.println(sortedSet.tailSet(4)); //Greare than : [4, 5, 6, 7]
+		System.out.println(sortedSet.subSet(2, 5)); // from and to : //[2, 3, 4]
+		
+		
+		System.out.println(sortedSet.removeFirst()); // 1
+		System.out.println(sortedSet); // [2, 3, 4, 5, 6, 7]
+		System.out.println(sortedSet.removeLast()); // 7
+		System.out.println(sortedSet); // [2, 3, 4, 5, 6]
+		//sortedSet.clear();
+		System.out.println(sortedSet.isEmpty());
+		System.out.println(sortedSet.contains(2)); // true
+		System.out.println(sortedSet.contains(12)); // false
+		
+		System.out.println(sortedSet.size()); // 5
+		
+		//containsAll()
+		//equals()
+		//retailAll()
+	
+		TreeSet<String> trset = new TreeSet<String>();
+		trset.add("A");
+		trset.add("D");
+		trset.add("E");
+		trset.add("B");
+		trset.add("C");
+		trset.add("D");
+		//treeset.add(null); // java.lang.NullPointerException
+		System.out.println(trset); // [A, B, C, D, E]
+		System.out.println(trset.lower("B")); // A
+		System.out.println(trset.higher("B")); // C
+		System.out.println(trset.floor("A"));  //greater than, equals to, less than // A
+		System.err.println(trset.headSet("C")); // [A, B]
+		System.err.println(trset.ceiling("C")); // greater than, equals to // C
+		System.out.println(trset.pollFirst()); // A
+		System.out.println(trset.pollLast()); // E
+		
+		System.out.println(trset.descendingSet()); // [D, C, B]
+		
+		Iterator<String> iterator = trset.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+			
+		}
+	}
+}
