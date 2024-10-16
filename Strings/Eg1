@@ -1,0 +1,23 @@
+package com.dl;
+
+public class Eg1 {
+
+	public static void main(String[] args) {
+		
+		//String : Sequences of Characters
+		char ch[] = {'a', 'b', 'c', 'd', 'e'};
+		System.out.println(ch);
+		
+		//String is immutable (we cannot modify)
+		
+		//How many ways we can create string
+		//2 ways: literal, new keyword
+		
+		String s1 = "java";
+		System.out.println(s1);
+		
+		String s2 = new String("python");
+		System.out.println(s2);
+		
+	}
+}
