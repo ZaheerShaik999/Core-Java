@@ -1,0 +1,32 @@
+package com.dl;
+
+public class Eg9 {
+
+	public static void main(String[] args) {
+		
+		//Split() and Join()
+		String s1 = new String("Hello Java and Hello Python");
+		String[] split = s1.split(" ");
+		for (String string : split) {
+			System.out.println(string);
+		}
+		
+		String join = String.join(" ", "Hello", "Java", "and", "Hello", "Python");
+		System.out.println(join);
+		
+		String s2 = new String("HelloJavaandHelloPython");
+		String[] split2 = s2.split("and");
+		for (String string : split2) {
+			System.out.println(string);
+		}
+		
+		String join2 = String.join("and", "HelloJava", "HelloPython");
+		System.out.println(join2);
+		
+		String s3 = new String("Hello Java and Hello Python and Hello JavaScript");
+		String[] split3 = s3.split("and", 2);
+		for (String string : split3) {
+			System.out.println(string);
+		}
+	}
+}
