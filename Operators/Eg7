@@ -1,0 +1,16 @@
+package com.dl.one;
+
+public class Eg7 {
+
+	public static void main(String[] args) {
+		 
+		int a = 10; 
+		int b = 2; 
+		
+		System.out.println(~a); // -11
+		System.out.println(~b); // -3
+		
+		//0000000000001010
+		//1111111111110101
+	}
+}
