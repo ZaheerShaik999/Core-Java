@@ -1,0 +1,39 @@
+package com.dl.one;
+
+//Wrapper Classes: Converting from one type to another data
+public class Eg1 {
+
+	//Primitive to Object (3)
+	//Object to Primitive (2)
+	
+	public static void main(String[] args) {
+		
+		//Task 1: Primitive to Object (3 Ways)
+		//The constructor Integer(int) has been deprecated since version 9 and marked for removal
+//		int i = 10; //p type
+//		Integer integer = new Integer(i); // o type
+//		System.out.println(integer);
+//		
+//		int j = 10; //p type
+//		Integer valueOf = Integer.valueOf(j); // o type
+//		System.out.println(valueOf);
+//		
+//		//Auto boxing
+//		int k = 10;  //p type
+//		Integer auto = k; // o type
+//		System.out.println(auto);
+		
+		//Task 2: Object to Primitive (2)
+		Integer integer = new Integer(10); // o type
+		int intValue = integer.intValue(); // p type
+		System.out.println(intValue);
+		
+		//Auto unboxing
+		Integer i = new Integer(10); // o type
+		int j = i;  // p type
+		System.out.println(j);
+		
+	}
+	
+	
+}
