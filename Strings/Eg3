@@ -1,0 +1,35 @@
+package com.dl;
+
+public class Eg3 {
+
+	public static void main(String[] args) {
+		
+		//new keyword
+		String s1 = new String("java"); // 2 objects //SCP and HEAP
+		String s2 = new String("java"); // 2 objects
+		
+		//content
+		System.out.println(s1.equals(s2));
+		System.out.println(s1 == s2);  // false
+		
+		String s3 = new String("python"); // 2 object
+		System.out.println(s3.equals(s1)); // false
+		
+		String s4 = "java"; //SCP
+		System.out.println(s1 == s4); //s1(Heap) == s4(SCP)
+		System.out.println(s1.equals(s4));
+		
+		String s5 = "java".concat("python");  //
+		System.out.println(s5);   // javapython
+		
+		String s6 = new String("javapython");
+		System.out.println(s5 == s6);  // false
+		System.out.println(s6.equals(s5)); // true
+		
+		String s7 = "".concat("NameOne").concat("NameTwo");
+		System.out.println(s7); // NameOneNameTwo
+		
+		//Literal
+		//new 
+	}
+}
