@@ -1,0 +1,96 @@
+package com.dl.three;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class Eg1 {
+
+	public static <V> void main(String[] args) {
+		
+		//Map : Map is not the child interface of collection
+		
+		//Map(I) -- HashMap(C) -- LinkedHashMap(C)
+		//Map(I) -- SortedMap(I) -- NavigableMap(I) -- TreeMap(C)
+		//Map(I) -- Dictionary(AC) -- HashTable(I) -- Properties(C) [JDBC]
+		//Map(I) -- IdentityHashMap(C) -- WeakHashMap(C) 
+		
+		//HashMap : Unorderd, Duplicates Values Allowed, Null Key Only Once, Null Value Many, Duplicate Key Overides, Non Synchronized
+		//LinkedHashMap: Orderd, Duplicates Values Allowed, Null Key Only Once, Null Value Many, Duplicate Key Overides,  Non Synchronized
+		//TreeMap : Duplicates Values Allowed, Null Key Not Allowed,  Null Value Many, Duplicate Key Overides,   Non Synchronized
+		//HashTable : Unorderd, Duplicates Values Allowed, Null Key Only Once, Null Value Many, Duplicate Key Overides, Synchronized
+		
+		//ArrayList : Non Synchronized
+		//Vector: Synchronized
+		
+		//StringBuffer : Synchronized
+		//StringBuilder : Non Synchronized
+		
+		//Unorderd (0 to 9)
+		HashMap<Integer, String> hashMap = new HashMap<Integer, String>();
+		hashMap.put(5, "NameFive");
+		hashMap.put(3, "NameThree");
+		hashMap.put(1, "NameOne");
+		hashMap.put(4, "NameFour");
+		hashMap.put(2, "NameTwo");
+		hashMap.put(2, "NameTwoDuplicate");
+		hashMap.put(8, null);
+		hashMap.put(7, null);
+		hashMap.put(null, "saikiran");
+		hashMap.put(null, "sairam");
+		hashMap.put(16, "NameSix");
+		hashMap.put(25, "NameFive");
+		hashMap.put(23, "NameThree");
+		hashMap.put(11, "NameOne");
+		System.out.println(hashMap);
+		
+		Collection<String> values = hashMap.values();
+		System.out.println(values);
+		
+		Set<Integer> keySet = hashMap.keySet();
+		System.out.println(keySet);
+		
+		//Ordered
+		LinkedHashMap<Integer, String> linkedHashMap  = new LinkedHashMap<Integer, String>();
+		linkedHashMap.put(5, "NameFive");
+		linkedHashMap.put(3, "NameThree");
+		linkedHashMap.put(1, "NameOne");
+		linkedHashMap.put(4, "NameFour");
+		linkedHashMap.put(2, "NameTwo");
+		linkedHashMap.put(2, "NameTwoDuplicate");
+		linkedHashMap.put(8, null);
+		linkedHashMap.put(7, null);
+		linkedHashMap.put(null, "saikiran");
+		linkedHashMap.put(null, "sairam");
+		linkedHashMap.put(16, "NameSix");
+		linkedHashMap.put(25, "NameFive");
+		linkedHashMap.put(23, "NameThree");
+		linkedHashMap.put(11, "NameOne");
+		System.out.println(linkedHashMap);
+		
+		//Natural
+		TreeMap<Integer, String> treeMap  = new TreeMap<Integer, String>();
+		treeMap.put(5, "NameFive");
+		treeMap.put(3, "NameThree");
+		treeMap.put(1, "NameOne");
+		treeMap.put(4, "NameFour");
+		treeMap.put(2, "NameTwo");
+		treeMap.put(2, "NameTwoDuplicate");
+		treeMap.put(8, null);
+		treeMap.put(7, null);
+		//treeMap.put(null, "saikiran"); // java.lang.NullPointerException
+		//treeMap.put(null, "sairam"); // java.lang.NullPointerException
+		treeMap.put(16, "NameSix");
+		treeMap.put(25, "NameFive");
+		treeMap.put(23, "NameThree");
+		treeMap.put(11, "NameOne");
+		System.out.println(treeMap);
+		
+		//Task : Check how they works
+		//Diff b/w HashMap (equals()) and IdentityHashMap (==) //Duplicate key
+		//Diff b/w HashMap(GC) and WeakHashMap (GC)
+		
+	}
+}
