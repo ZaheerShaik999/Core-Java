@@ -1,0 +1,32 @@
+package com.dl.one;
+
+public class Eg2 {
+
+	public static void main(String[] args) {
+		
+		//String to Object (2)
+		//Object to String (2)
+		
+		//Task 1: Cons
+	    String s1 = "10"; //s type
+	    Integer integer = new Integer(s1); //o type
+	    System.out.println(integer);
+	    
+	    //Task 2: valueOf()
+	    String s2 = "10"; //s type
+	    Integer valueOf = Integer.valueOf(s2); //o type
+	    System.out.println(valueOf);
+	    
+		//Task 1:  toString()
+	    Integer i = new Integer(10);  //o type
+	    String s3 = i.toString(); //s type
+	    System.out.println(s3);
+	    
+	    //Task 2: + Operator
+	    Integer ii = new Integer(10); 
+	    String s4 = "" + ii;
+	    System.out.println(s4);
+	    
+	    
+	}
+}
