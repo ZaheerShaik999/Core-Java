@@ -1,0 +1,29 @@
+package com.dl.one;
+
+public class Eg1 {
+
+	public static void main(String[] args) {
+		
+		//Variable: A variable holds the stores the values
+		//The userName Variable is holding the value if "Sai Kiran" whuch is a type of String
+		String userName = "Sai Kiran";
+		System.out.println(userName);
+		
+       //Data Types: byte short int long float double boolean char
+	   //Classes: Arrays, String, Collections
+		
+	   //Operators in Java
+	   //Arithmetic Operators + - * / = %
+	   int a = 10;
+	   int b = 5;
+	   
+	   System.out.println(a+b); // 15
+	   System.out.println(a-b); //5
+	   System.out.println(a*b);  //50
+	   System.out.println(a/b); // 2
+	   System.out.println(a%b); //0
+	   
+	   
+		
+	}
+}
