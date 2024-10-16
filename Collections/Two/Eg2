@@ -1,0 +1,32 @@
+package com.dl.two;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.TreeSet;
+
+public class Eg2 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> al = new ArrayList<String>();
+		al.add("A");
+		al.add("D");
+		al.add("B");
+		al.add("C");
+		al.add("F");
+		al.add("F");
+		al.add("E");
+		System.out.println(al);
+		
+//		TreeSet<String> treeSet = new TreeSet<String>(al);
+//		System.out.println(treeSet); // Loosing Duplicates
+		
+		al.sort(null);
+		System.out.println(al); //Not Loosing Duplicates
+		
+		Collections.reverse(al);
+		System.out.println(al); 
+		
+		
+	}
+}
