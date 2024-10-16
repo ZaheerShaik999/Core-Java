@@ -1,0 +1,121 @@
+package com.dl.one;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Stack;
+import java.util.Vector;
+
+public class Eg1 {
+
+	//What are Collections?
+	//Collections is a class, this class contains predefined methods.
+	//Collections are growable in size, they have hetrogenious elements
+	
+	//Note: Collection is a interface, Collections is a class
+	
+	//Diff b/w Arrays and Collections
+	//Arrays are fixed in size 
+	//Eg:int a[] = new int[5];
+	//In Collections we can add elements over the size
+	//Eg:ArrayList<String> arrayList = new ArrayList<String>();
+	
+	//Diff b/w List, Set, Map
+	//List: List will maintain insertion order, duplicates allowed
+	//Set : Set will not maintain insertion order, no duplicates allowed
+	//Map : Key and Value pair (Not a child of Collection Interface)
+	
+	//Draw the Hierarchy of List
+	//Collection(I) -- List(I) -- ArrayList(C) -- LinkedList(C) and Vector(C) -- Stack(C)
+	
+	//What are the cursors we have
+	//Enumeration(I) : Vector, Iterator(I) : ArrayList, ListIterator(I) : LinkedList, 
+	
+	//Diff b/w ArrayList(Sorting and Accessing) and LinkedList(Manipulating)
+	//Diff b/w ArrayList(Not synchronized) and Vector(synchronized)
+	
+	public static <E> void main(String[] args) {
+		
+		//For Sorting and Accessing the data we use ArrayList //Creating, Updating, Reading, Deleting, Finding
+		//Cursors: The data traverse in one direction
+		List<String> arrayList = new ArrayList<String>();
+		arrayList.add("NameOne"); 
+		arrayList.add("NameTwo");
+		arrayList.add("NameThree");
+		arrayList.add("NameFour");
+		arrayList.add("NameOne");
+		arrayList.add("NameFive");
+		System.out.println(arrayList);
+		
+		arrayList.add(0, "NameZero");
+		arrayList.add(1, "NameOne"); // If we add the same element, the old element moves to next position
+		
+		arrayList.set(1, "Sai Kiran");
+		arrayList.set(7, "Ajay");
+		arrayList.set(2, "Lokesh");
+		arrayList.set(3, "Ganesh");
+		
+		System.out.println(arrayList);
+		
+		System.out.println(arrayList.size()); // 6
+		
+		System.out.println(arrayList.get(0));
+		
+		System.out.println(arrayList.remove(7));
+		System.out.println(arrayList.remove(4));
+		
+		System.out.println(arrayList);
+		
+		System.out.println(arrayList.indexOf("Ajay"));
+		
+		System.out.println();
+		
+		Iterator<String> iterator = arrayList.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		
+		//For Manupulating the data we use LinkedList, Cursors: The data traverse in both directions
+		List<String> linkedList = new LinkedList<String>();
+		linkedList.add("NameOne"); 
+		linkedList.add("NameTwo");
+		linkedList.add("NameThree");
+		linkedList.add("NameFour");
+		linkedList.add("NameOne");
+		linkedList.add("NameFive");
+		System.out.println(linkedList);
+		
+		ListIterator<String> listIterator = linkedList.listIterator();
+		while (listIterator.hasNext()) {
+			System.out.println(listIterator.next());;
+			
+		}
+		
+		System.out.println();
+		
+		while (listIterator.hasPrevious()) {
+			System.out.println(listIterator.previous());;
+			
+		}
+		
+		//Take as Self Learning
+		Vector<String> vector = new Vector<String>();
+		
+		//LIFO Principle (Last in First Out)
+		Stack<String> stack = new Stack<String>();
+		
+		//DS: ArrayList  : Array
+		//DS: LinkedKist : Double Linked List
+		//DS :Stack : LinearDataStructure
+		//DS : Vector : Dynamic Array
+		//DS : HashSet : HashTable
+		//DS : LinkedHashSet : HashTable and LinkedList
+		//DS : TreeSet : TreeMap
+		//DS : HashMap : HashTable
+		//DS : LinkedHashMap : HashTable and LinkedList
+		//DS : TreeMap : Red Black Tree
+		
+	}
+}
