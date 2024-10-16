@@ -1,0 +1,31 @@
+package com.dl;
+
+public class Eg2 {
+
+	public static void main(String[] args) {
+		
+		//String Literal
+		String s1 = "java";  // 1 object   (scp: string constant pool)
+		String s2 = "python"; // 1 object   (scp: string constant pool)
+		String s3 = "java"; // 1 object   (scp: string constant pool)
+		
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+		
+		//== ref com
+		System.out.println(s1 == s2); //false // java == python
+		System.out.println(s1 == s3); //true // java == java
+		
+		//content com
+		System.out.println(s1.equals(s2)); // false
+		System.out.println(s1.equals(s3)); // true
+		
+		String s4 = s1.concat("JavaScript");
+		
+		System.out.println(s4);
+		
+		System.out.println(s1);
+		
+	}
+}
