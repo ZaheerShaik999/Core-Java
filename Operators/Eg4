@@ -1,0 +1,28 @@
+package com.dl.one;
+
+public class Eg4 {
+
+	public static void main(String[] args) {
+		
+		//Unary Operators ++ --
+		int a = 10;
+		int b = 20;
+		
+		//a++ : after
+		//++aa : before
+		
+		System.out.println(a++); // 10
+		
+		System.out.println(a); // 11
+		
+		System.out.println(b++); // 20
+		
+		System.out.println(b); // 21
+		
+		System.out.println(++a); // 12 
+		
+		a = 10;
+		System.out.println(a);
+		
+	}
+}
