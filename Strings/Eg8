@@ -1,0 +1,45 @@
+package com.dl;
+
+public class Eg8 {
+
+	public static void main(String[] args) {
+		
+		String s1 = "Java and Python and JavaScript";
+		
+		//substring
+		System.out.println(s1.substring(4));
+		
+		System.out.println(s1.substring(0, 4));
+		
+		//replace()
+		
+		String s2 = "aws";
+		String s3 = "azure and aws and azure";
+		
+//		System.out.println(s2.replace("aws", "AWS")); // AWS
+		System.out.println(s2.replace("a", "AWS")); // AWS
+		
+		System.out.println(s3.replaceFirst("azure", "Azure"));
+		
+		System.out.println(s3.replaceAll("azure", "Azure"));
+		
+		//Task 1:
+		//remove the white spaces from the string
+		String s4 = "I like programming and I like teaching";
+		System.out.println(s4.replace(" ", ""));  // IlikeprogrammingandIliketeaching
+		
+		//Task 2: Replace the String from the Middle of the Index
+		String s5 = "Franklin and Michal";
+		
+		char[] charArray = s5.toCharArray();
+		charArray[0] = 'f';
+		charArray[13] = 'm';
+		System.out.println(charArray); // franklin and Michal
+		
+		String s6 = "John";
+		System.out.println(s6.toUpperCase());
+		System.out.println(s6.toLowerCase());
+		
+		
+	}
+}
