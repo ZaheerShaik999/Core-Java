@@ -1,0 +1,24 @@
+package com.dl.blocks;
+
+public class Eg1 {
+
+	public static void main(String[] args) {
+
+		new Eg1();
+	}
+
+	// instance block
+	{
+		int a = 100;
+		System.out.println(a);
+		System.out.println("instance block");
+	}
+
+	static {
+		
+		int a = 10;
+		System.out.println(a);
+		System.out.println("static block");
+	}
+
+}
