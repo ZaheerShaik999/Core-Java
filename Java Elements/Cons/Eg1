@@ -1,0 +1,29 @@
+package com.dl.cons;
+
+import java.util.Scanner;
+
+public class Eg1 {
+	
+	// Zero Arg-Con
+	public Eg1() {
+		System.out.println("default cons");
+	}
+	
+	//Parameterized Cons
+	public Eg1(int a) {
+		System.out.println("para cons" + " "  + a);
+	}
+
+
+	// Constructor : Constructor name and class name must be same, cons can be method
+	
+	public static void main(String[] args) {
+		
+		//Constructor
+		new Eg1();
+		new Eg1(10);
+		
+		Scanner scanner = new Scanner(System.in);
+		
+	}
+}
