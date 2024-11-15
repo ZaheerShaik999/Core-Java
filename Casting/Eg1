@@ -1,0 +1,47 @@
+package com.dl.one;
+
+//Casting: Converting from one type to another type
+//Types of Casting: Implicit and Explicit
+public class Eg1 {
+
+	public static void main(String[] args) {
+		
+		//Implicit: Lower Data type to Higher Data type
+		//Byte --> Short --> Integer --> Long --> Float --> Double
+		//                   Character
+		//Explict: Higher Data type to Lower Data type 
+		//Double --> Float -->  Long --> Integer --> Short --> Byte
+		//                               Character
+		//Implicit
+		byte b1 = 10;
+		
+		short s1 = b1;
+		
+		int i1 = s1;
+		
+		long l1 = i1;
+		
+		float f1 = l1;
+		
+		double d1 = f1;
+		
+		System.out.println(d1);
+		
+		// Explict
+		double d11 = 10.0;
+		
+		float f11 = (float)d11;
+		
+		long l11 = (long)f11;
+		
+		int i11 = (int)l11;
+		
+		short s11 = (short)i11;
+		
+		byte b11 = (byte)s11;
+		
+		System.out.println(b11);
+		
+		
+	}
+}
